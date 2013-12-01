@@ -38,7 +38,9 @@ function decrypt() {
 	if (password.length >=1 && encrypted.length >=1) {    //only run if we have a key and atleast 1 charachter to encrypt
 				decrypted = CryptoJS.AES.decrypt(encrypted, password);
 				console.log("PlainText:"+decrypted.toString(CryptoJS.enc.Utf8));
-				$('#decrypted-message').html(decrypted.toString(CryptoJS.enc.Utf8));
+				var out = decrypted.toString(CryptoJS.enc.Utf8);
+				out = out.replace(/(<([^>]+)>)/ig,"");
+				$('#decrypted-message').html(out);
 				$('#decrypted-message').css({"background-color" : "#000"});
 				$('#decrypted-message').css({"color" : "green"});
 				$('#decrypted-message').css({"font-size" : "large"});
