@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Crypto Bandito</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="css/jquery-ui.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+    
+    <div class="container">
+        
+<!-- INTRO PAGE -->
+    
+                <div class="col-md-3">
+                    <form  class="form-inline" role="form">
+                        <div class="form-group">
+                            <input class="form-control" id="password" type="text" placeholder="Enter password" title="Make sure your password is long!">
+                            <input class="form-control" id="message" type="text" placeholder="Enter message" title="Secret message goes here!">
+                                <button type="button" class="btn btn-default btn-lg" onclick="encrypt();" >
+                        Encrypt <span class="glyphicon glyphicon-arrow-random"></span> 
+                    </button>
+                         </div>   
+                    </form>
+                    <div id="encrypted-message"></div>
+                 </div>
+                
+            <div class="col-md-3">
+                    <form  class="form-inline" role="form">
+                        <div class="form-group">
+                            <input class="form-control" id="encrypted-text" type="text" placeholder="Enter encrypted message" title="Secret message goes here!">
+                                <button type="button" class="btn btn-default btn-lg" onclick="decrypt();" >
+                        Decrypt <span class="glyphicon glyphicon-arrow-transfer"></span> 
+                    </button>
+                         </div>   
+                    </form>
+                    <div id="decrypted-message"></div>
+                 </div>
+
+    </div>
+   
+
+<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/core-min.js"></script>
+<script type="text/javascript" src="js/aes.js"></script>
+<script type="text/javascript" src="js/lib.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>
+
